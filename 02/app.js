@@ -2,6 +2,7 @@ const inputElement = document.getElementById('title')
 const createBtn = document.getElementById('create')
 const listElement = document.getElementById('list')
 
+
 //const notes=['заметка 1','заметка 2','заметка 3','заметка 4'].map(el => el+' map сработал');
 
 const notes=[{
@@ -12,7 +13,6 @@ const notes=[{
         title: 'вторая заметка',
         completed: false,
     }]
-
 
 //отрисовывает сохраненный список
 function render(){
@@ -50,6 +50,7 @@ createBtn.onclick = ()=>{
     render()
     /*listElement.insertAdjacentHTML("beforeend",getNoteTemplate(newNote)),*/
     inputElement.value=""
+
 }
 
 listElement.onclick = function(event){
@@ -64,6 +65,7 @@ listElement.onclick = function(event){
         //console.log('нажал удалить')
     }
     render()
+    
 }
 
 //функция отрисосвывает и возвращает элемент списка
